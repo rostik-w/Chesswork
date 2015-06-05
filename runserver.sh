@@ -1,3 +1,3 @@
 #!/bin/sh
 
-python -m SimpleHTTPServer  2>&1 >> /var/log/chesswork.log &
+python -m SimpleHTTPServer  2>&1 >> ./logs/chesswork.log
