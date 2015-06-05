@@ -70,22 +70,14 @@ $(document).ready(function(){
         $('#btnNext').click();
       }
       return false;
-    }
-  });
-
-  $(document).keydown(function(e){
-    if (e.keyCode == 37) { //left arrow
+    } else if (e.keyCode == 37) { //left arrow
       if (e.ctrlKey) {
         $('#btnStart').click();
       } else {
         $('#btnPrevious').click();
       }
-    }
-    return false;
-  });
-
-  $(document).keydown(function(e){
-    if (e.keyCode == 38) { //up arrow
+      return false;
+    } else if (e.keyCode == 38) { //up arrow
       if (currentGame > 0) {
         if (e.ctrlKey) {
           loadGame(0);
@@ -94,12 +86,8 @@ $(document).ready(function(){
         }
       }
       $('#gameSelect').val(currentGame);
-    }
-    return false;
-  });
-
-  $(document).keydown(function(e){
-    if (e.keyCode == 40) { //down arrow
+      return false;
+    } else if (e.keyCode == 40) { //down arrow
       if (currentGame < pgnData.length - 1) {
         if (e.ctrlKey) {
           loadGame(pgnData.length - 1);
@@ -108,8 +96,8 @@ $(document).ready(function(){
         }
       }
       $('#gameSelect').val(currentGame);
+      return false;
     }
-    return false;
   });
 
 
